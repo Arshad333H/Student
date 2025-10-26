@@ -67,12 +67,14 @@ const HomePage: React.FC = () => {
                         Restricted access for staff and institutional oversight.
                     </p>
                 </div>
-                
+                <LoginLink 
+                        className="w-full flex justify-center py-4 px-4 rounded-xl shadow-2xl text-xl font-bold text-slate-900 bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 transition duration-200 transform hover:translate-y-[-2px]"
+                    >
+                        Admin Login
+                    </LoginLink>
                 <Link 
-                    href="/admin-login"
-                    className="w-full flex justify-center py-4 px-4 rounded-xl shadow-2xl text-xl font-bold text-slate-900 bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-4 focus:ring-yellow-300 transition duration-200 transform hover:translate-y-[-2px]"
-                >
-                    Admin Login
+                    href="/admin">
+                    <LoginLink>Admin Login</LoginLink>
                 </Link>
             </div>
             

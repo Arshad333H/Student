@@ -1,10 +1,19 @@
 "use client";
 
-
 import { useState } from "react";
-import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import Link from "next/link";
-import { Menu, X, LogOut, User, LayoutDashboard, FileText, CheckCircle, Calendar, Edit3 } from "lucide-react";
+import {
+  Menu,
+  X,
+  LogOut,
+  User,
+  LayoutDashboard,
+  FileText,
+  CheckCircle,
+  Calendar,
+  Edit3,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -86,7 +95,10 @@ export default function Navbar() {
                 </AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56 mt-2 shadow-lg rounded-xl p-1">
+            <DropdownMenuContent
+              align="end"
+              className="w-56 mt-2 shadow-lg rounded-xl p-1"
+            >
               <DropdownMenuLabel className="text-sm font-bold text-gray-900 px-3 pt-2 pb-1">
                 {user.name}
               </DropdownMenuLabel>
@@ -102,7 +114,7 @@ export default function Navbar() {
               <DropdownMenuItem
                 className="p-2 cursor-pointer rounded-lg text-red-600 font-medium hover:bg-red-50"
                 onSelect={(e) => {
-                  e.preventDefault(); 
+                  e.preventDefault();
                   console.log("Logging out...");
                 }}
               >
@@ -131,4 +143,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-}   
+}

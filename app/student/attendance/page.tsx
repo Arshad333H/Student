@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { RadialBarChart, RadialBar, ResponsiveContainer, Cell } from 'recharts';
+import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 
 const overallAttendanceRate = 88;
 const courseAttendanceData = [
