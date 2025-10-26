@@ -14,16 +14,16 @@ export async function GET() {
     },
   });
 
-  if(!dbUser){
-    dbUser=await prisma.user.create({
-        data:{
-            id:user.id,
-            name:user.given_name,
-            email:user.email ?? "",
-            profileImg:user.picture ?? `https://avatar.vercel.sh/${user.given_name}`,
-            
-        }
-    })
+  if (!dbUser) {
+    dbUser = await prisma.user.create({
+      data: {
+        id: user.id,
+        name: user.given_name,
+        email: user.email ?? "",
+        profileImg:
+          user.picture ?? `https://avatar.vercel.sh/${user.given_name}`,
+      },
+    });
   }
-  return NextResponse.redirect("http://localhost:3000/student")
+  return NextResponse.redirect("http://localhost:3000/student");
 }
